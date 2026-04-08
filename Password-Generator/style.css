@@ -64,6 +64,11 @@ body {
     margin-right: 10px;
 }
 
+/* Copy icon hover */
+.display img:hover {
+    transform: scale(1.2);
+}
+
 .container button {
     border: 0;
     outline: 0;
@@ -78,4 +83,10 @@ body {
     align-items: center;
     border-radius: 6px;
     cursor: pointer;
+}
+
+/* Hover effect */
+.container button:hover {
+    transform: scale(1.05);
+    background: #00c46a;
 }

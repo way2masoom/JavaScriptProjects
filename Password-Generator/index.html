@@ -8,13 +8,16 @@
     </head>
     <body>
         <div class="container">
-            <h1>Generator A <br> <span> Random Password</span></h1>
+            <h1>Generate A <br> <span> Random Password</span></h1>
             <div class="display">
-                <input type="text" placeholder="Password">
-                <img src="images/copy.png" alt="copy btn">
-            </div>
-            <button><img src="images/generate.png" alt="Generate btn"> Generator
+                <input type="text" id="password" placeholder="Password"
+                    readonly>
+                <img src="images/copy.png" alt="copy btn"
+                    onclick="copyPassword()"> </div>
+            <button onclick="createPassword()"><img src="images/generate.png"
+                    alt="Generate btn"> Generator
                 Password</button>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
