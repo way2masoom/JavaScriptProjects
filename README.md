@@ -14,8 +14,7 @@ Each project focuses on improving logic, DOM manipulation, and real-world proble
 * Copy to clipboard feature
 
 👉 [View Code](./Password-Generator)
-👉 [Live Demo](#) *(add your deployed link later)*
-
+👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/Password-Generator/index.html)
 ---
 
 ## 🧪 Upcoming Projects
