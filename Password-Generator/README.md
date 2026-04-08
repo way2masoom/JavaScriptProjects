@@ -17,13 +17,12 @@ A simple and secure password generator built using JavaScript.
 
 ![Password Generator UI](./images/PasswordGenerator.png)
 
-*(Add your screenshot inside images folder and name it screenshot.png)*
 
 ---
 
 ## 🌐 Live Demo
 
-👉 https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/Password-Generator/index.html
+👉  [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/Password-Generator/index.html)
 
 
 ---
