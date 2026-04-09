@@ -82,7 +82,7 @@ body {
 
 }
 
-.keyboard button {
+:where(.game-modal, .keyboard) button {
     color: #fff;
     font-size: 1rem;
     font-weight: 500;
@@ -93,9 +93,58 @@ body {
     border: none;
     background: #5e63ba;
     text-transform: uppercase;
+}
+
+.keyboard button {
+    padding: 7px;
     width: calc(100% / 9 - 5px);
 }
 
-.keyboard button:hover{
-    background:#8286c9 ;
+:where(.game-modal, .keyboard) button:hover {
+    background: #8286c9;
+}
+
+/* game-modal section */
+.game-modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.6);
+}
+
+.game-modal .gcontainer {
+    background: #fff;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.game-modal img {
+    max-width: 130px;
+}
+
+.game-modal h4 {
+    font-size: 1.5rem;
+}
+
+.game-modal p {
+    font-size: 1.5rem;
+    margin: 15px 0 30px;
+    font-weight: 500;
+}
+
+.game-modal p b {
+    color: #5e63ba;
+    font-weight: 600;
+}
+
+.game-modal button {
+    padding: 12px 23px;
 }
