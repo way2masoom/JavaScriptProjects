@@ -22,7 +22,7 @@ A simple and secure password generator built using JavaScript.
 
 ## 🌐 Live Demo
 
-👉  [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/Password-Generator/index.html)
+👉  [Explore Here](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/Password-Generator/index.html)
 
 
 ---
