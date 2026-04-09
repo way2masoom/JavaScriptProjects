@@ -1,3 +1,4 @@
+/* Reset default spacing */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: sans-serif;
 }
 
+/* Center whole game on screen */
 body {
     display: flex;
     justify-content: center;
@@ -14,6 +16,7 @@ body {
     min-height: 100vh;
 }
 
+/* Main container */
 .container {
     width: 850px;
     background: #fff;
@@ -24,10 +27,12 @@ body {
     border-radius: 10px;
 }
 
+/* Hangman image */
 .hangman-box img {
     max-width: 270px;
 }
 
+/* Game title */
 .hangman-box h1 {
     font-size: 1.45rem;
     margin-top: 20px;
@@ -35,6 +40,7 @@ body {
     text-transform: uppercase;
 }
 
+/* Word display (letters) */
 .word-display {
     display: flex;
     align-items: center;
@@ -43,6 +49,7 @@ body {
     gap: 10px;
 }
 
+/* Each letter box */
 .word-display .letter {
     width: 28px;
     font-size: 2rem;
@@ -53,6 +60,7 @@ body {
     margin-bottom: 40px;
 }
 
+/* When letter is guessed */
 .word-display .letter.guessed {
     border-color: transparent;
     margin: -40px 0 35px;
@@ -74,6 +82,7 @@ body {
     color: #ff0000;
 }
 
+/* Keyboard layout */
 .game-box .keyboard {
     display: flex;
     gap: 5px;
@@ -83,6 +92,7 @@ body {
 
 }
 
+/* Buttons styling */
 :where(.game-modal, .keyboard) button {
     color: #fff;
     font-size: 1rem;
@@ -105,7 +115,7 @@ body {
     background: #8286c9;
 }
 
-/* game-modal section */
+/* Modal (Game Over screen) */
 .game-modal {
     display: none;
     align-items: center;
@@ -164,5 +174,9 @@ body {
 
     .hangman-box h1 {
         display: none;
+    }
+
+    .keyboard button {
+        width: calc(100% / 7 - 5px);
     }
 }
