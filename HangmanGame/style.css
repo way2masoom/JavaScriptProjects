@@ -110,6 +110,10 @@ body {
     padding: 7px;
     width: calc(100% / 9 - 5px);
 }
+.keyboard button[disabled]{
+    opacity: 0.6;
+    position: none;
+}
 
 :where(.game-modal, .keyboard) button:hover {
     background: #8286c9;
