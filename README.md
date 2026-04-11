@@ -17,6 +17,21 @@ Each project focuses on improving logic, DOM manipulation, and real-world proble
 👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/Password-Generator/index.html)
 ---
 
+### 🎮 2. Hangman Game (In Progress)
+
+An interactive word guessing game built using JavaScript.
+
+## 🚀 Features
+* Dynamic keyboard (A–Z)
+* Displays hints
+* Tracks incorrect guesses
+* Game over modal
+
+👉 [View Code](./HangmanGame)
+👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/HangmanGame/index.html)
+---
+https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/HangmanGame/index.html
+
 ## 🧪 Upcoming Projects
 
 * ✅ Todo List App
