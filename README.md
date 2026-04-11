@@ -30,7 +30,6 @@ An interactive word guessing game built using JavaScript.
 👉 [View Code](./HangmanGame)
 👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/HangmanGame/index.html)
 ---
-https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/HangmanGame/index.html
 
 ## 🧪 Upcoming Projects
 
