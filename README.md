@@ -7,7 +7,7 @@ Each project focuses on improving logic, DOM manipulation, and real-world proble
 
 ## 📌 Projects
 
-### 🔐 Password Generator
+### 🔐 1. Password Generator
 
 * Generate strong random passwords
 * Includes uppercase, lowercase, numbers, and symbols
@@ -15,13 +15,15 @@ Each project focuses on improving logic, DOM manipulation, and real-world proble
 
 👉 [View Code](./Password-Generator)
 👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/Password-Generator/index.html)
+
 ---
 
-### 🎮 2. Hangman Game (In Progress)
+### 🎮 2. Hangman Game *(In Progress)*
 
 An interactive word guessing game built using JavaScript.
 
-## 🚀 Features
+#### 🚀 Features
+
 * Dynamic keyboard (A–Z)
 * Displays hints
 * Tracks incorrect guesses
@@ -29,6 +31,7 @@ An interactive word guessing game built using JavaScript.
 
 👉 [View Code](./HangmanGame)
 👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/HangmanGame/index.html)
+
 ---
 
 ## 🧪 Upcoming Projects
@@ -49,10 +52,15 @@ An interactive word guessing game built using JavaScript.
 
 ---
 
-## 📬 Connect With Me
+## 👨‍💻 Author
 
-* GitHub: https://github.com/way2masoom
+Built with ❤️ by MD Masoom Alam
+
+[GitHub](https://github.com/way2masoom)
+[LinkedIn](https://www.linkedin.com/in/way2masoom/)
 
 ---
 
-⭐ If you like this repo, give it a star!
+## ⭐ Support
+
+If you like this repo, give it a ⭐ on GitHub!
