@@ -1,7 +1,11 @@
+const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word-display");
 const keyboardDiv = document.querySelector(".keyboard");
+const guessedText = document.querySelector(".guesses-text b");
 
-let currentWord;
+
+let currentWord, wrongGuessCount = 0;
+const maxGuesses = 6;
 
 // get randomWords 
 const getRandomWords = () => {
@@ -23,8 +27,12 @@ const initGame = (button, clickedLetter) => {
             }
         })
     } else {
-        console.log(clickedLetter, "is Not exits on word");
+        // If clicked letter doesn't exits then update the wrongGuessCount and hangman image
+        wrongGuessCount++;
+        hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
     }
+    button.disabled = true;
+    guessedText.innerHTML = `${wrongGuessCount} / ${maxGuesses}`;
     console.log(button, clickedLetter);
 
 }
