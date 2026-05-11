@@ -34,7 +34,6 @@ An interactive word guessing game built using JavaScript.
 
 ---
 
-```md
 ### 🎨 3. Color Changer
 
 A simple and interactive background color switcher built using JavaScript DOM manipulation.
