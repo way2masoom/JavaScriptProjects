@@ -18,7 +18,7 @@ Each project focuses on improving logic, DOM manipulation, and real-world proble
 
 ---
 
-### 🎮 2. Hangman Game *(In Progress)*
+### 🎮 2. Hangman Game 
 
 An interactive word guessing game built using JavaScript.
 
@@ -31,6 +31,23 @@ An interactive word guessing game built using JavaScript.
 
 👉 [View Code](./HangmanGame)
 👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/HangmanGame/index.html)
+
+---
+
+```md
+### 🎨 3. Color Changer
+
+A simple and interactive background color switcher built using JavaScript DOM manipulation.
+
+#### 🚀 Features
+
+* Change website background colors dynamically
+* Uses click event listeners
+* Beginner-friendly DOM project
+* Smooth and responsive UI
+
+👉 [View Code](./ColorChanger)
+👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/ColorChanger/index.html)
 
 ---
 
