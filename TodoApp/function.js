@@ -1,4 +1,4 @@
-
+// Loading todo 
 function loadTodos() {
     // this function will load the todo from browser
     const todos = JSON.parse(localStorage.getItem("todos")) || { "todoList": [] }
@@ -27,10 +27,11 @@ function appendTodoInHtml(todoText) {
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DomContentLoaded Sucessfully");
 
-
     const todoInput = document.getElementById("todoInput");
 
     const sumbitButton = document.getElementById("addTodo");
+
+    const todoList = document.getElementById("todoList");
 
     sumbitButton.addEventListener("click", (event) => {
         const todoText = todoInput.value;
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             addTodoToLocalStoreage(todoText)
             appendTodoInHtml(todoText);
+            todoInput.value = ' '
         }
     });
 
@@ -50,7 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(event.target.value);
     });
 
-    loadTodos();
+    const todo = loadTodos();
+
+    todo.todoList.forEach(todo => {
+        const newTodoIteam = document.createElement("li");
+        newTodoIteam.textContent = todo
+        todoList.appendChild(newTodoIteam)
+    });
 
 })
 
