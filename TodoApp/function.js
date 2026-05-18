@@ -13,6 +13,16 @@ function addTodoToLocalStoreage(todoText) {
     localStorage.setItem("todos", JSON.stringify(todos))
 }
 
+// Function to append todoslist to html
+function appendTodoInHtml(todoText) {
+    const todoList = document.getElementById("todoList");
+    const todo = document.createElement("li");
+    todo.textContent = todoText;
+
+    todoList.appendChild(todo)
+
+}
+
 // Domeconter loader
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DomContentLoaded Sucessfully");
@@ -28,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Please write something for Todo")
         } else {
             addTodoToLocalStoreage(todoText)
+            appendTodoInHtml(todoText);
         }
     });
 
