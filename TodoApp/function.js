@@ -13,6 +13,39 @@ function addTodoToLocalStoreage(todo) {
     localStorage.setItem("todos", JSON.stringify(todos))
 }
 
+// funtion to executed the filters buttons
+function executedFilterAction(event) {
+    const todoList = document.getElementById("todoList");
+
+    const element = event.target
+    const value = element.getAttribute("data-filter")
+
+    todoList.innerHTML = ''
+    const todos = loadTodos();
+
+
+    // condition toe chek is the todo is  All, completed or pending 
+    if (value === 'all') {
+        console.log("All todos");
+        todos.todoList.forEach(todo => {
+            appendTodoInHtml(todo);
+        });
+    } else if (value === 'pending') {
+        console.log("Pending todo");
+        todos.todoList.forEach(todo => {
+            if (todo.isCompleted !== true) {
+                appendTodoInHtml(todo);
+            }
+        });
+    } else {
+        console.log("Completed todo");
+        todos.todoList.forEach(todo => {
+            if (todo.isCompleted == true)
+                appendTodoInHtml(todo);
+        });
+    }
+}
+
 // Function to append todoslist to html
 function appendTodoInHtml(todo) {
     const todoList = document.getElementById("todoList");
@@ -63,6 +96,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const todoList = document.getElementById("todoList");
 
+    // on the click of filter buttons
+    const filterBtns = document.getElementsByClassName("filterBtn");
+    console.log(filterBtns);
+
+    for (const btn of filterBtns) {
+        btn.addEventListener("click", executedFilterAction)
+    }
+
+
     sumbitButton.addEventListener("click", (event) => {
         const todoText = todoInput.value;
         if (todoText === '') {
@@ -82,13 +124,9 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(event.target.value);
     });
 
-    const todo = loadTodos();
+    const todos = loadTodos();
 
-    todo.todoList.forEach(todo => {
-        // const newTodoIteam = document.createElement("li");
-        // newTodoIteam.textContent = todo
-        // todoList.appendChild(newTodoIteam)
-
+    todos.todoList.forEach(todo => {
         appendTodoInHtml(todo);
     });
 
