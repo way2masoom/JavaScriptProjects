@@ -18,10 +18,15 @@ function appendTodoInHtml(todoText) {
     const todoList = document.getElementById("todoList");
     const todoIteam = document.createElement("li");
 
-    todoIteam.textContent = todoText;
+    const textDiv = document.createElement("div");
+
+    textDiv.textContent = todoText;
     todoIteam.classList.add('todoItem')
 
-    // Createing filter buttons 
+    /****** Createing filter buttons  ******/
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("todoButtons")
+
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
     editBtn.classList.add("editBtn")
@@ -32,11 +37,17 @@ function appendTodoInHtml(todoText) {
 
     const completedBtn = document.createElement("button");
     completedBtn.textContent = "Completed";
-    completedBtn.classList.add("completedBtn")
+    completedBtn.classList.add("completeBtn")
 
-    todoIteam.appendChild(editBtn)
-    todoIteam.appendChild(deletBtn)
-    todoIteam.appendChild(completedBtn)
+    wrapper.appendChild(editBtn)
+    wrapper.appendChild(deletBtn)
+    wrapper.appendChild(completedBtn)
+
+    todoIteam.appendChild(textDiv);
+
+    todoIteam.appendChild(wrapper)
+
+    /****** End of filter button  ******/
 
     todoList.appendChild(todoIteam)
 
@@ -74,9 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const todo = loadTodos();
 
     todo.todoList.forEach(todo => {
-        const newTodoIteam = document.createElement("li");
-        newTodoIteam.textContent = todo
-        todoList.appendChild(newTodoIteam)
+        // const newTodoIteam = document.createElement("li");
+        // newTodoIteam.textContent = todo
+        // todoList.appendChild(newTodoIteam)
+
+        appendTodoInHtml(todo)
     });
 
 })

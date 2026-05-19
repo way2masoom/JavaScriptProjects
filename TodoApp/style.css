@@ -10,6 +10,9 @@
     --border-Color: #ddd;
     --btn-secondary: #efc727;
     --btn-active: #4a90e2;
+    --btn-edit: #ffd700;
+    --btn-completed: #32cd32;
+    --btn-delet: #ff6347;
 }
 
 body {
@@ -65,8 +68,11 @@ li:hover {
 }
 
 /* Filter Buttons  */
-.filterBtn {
-    padding: 5px 6px;
+.filterBtn,
+.editBtn,
+.deletBtn,
+.completeBtn {
+    padding: 8px 6px;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 5px;
@@ -74,6 +80,18 @@ li:hover {
     font-size: 16px;
     background-color: var(--btn-secondary);
     transition: background-color 0.3s;
+}
+
+.editBtn {
+    background-color: var(--btn-edit);
+}
+
+.deletBtn {
+    background-color: var(--btn-delet);
+}
+
+.completeBtn {
+    background-color: var(--btn-completed);
 }
 
 .filterBtn:hover {
@@ -87,4 +105,11 @@ li:hover {
 
 .fileterbtn .filterBtn {
     padding: 15px;
+}
+
+.todoItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
