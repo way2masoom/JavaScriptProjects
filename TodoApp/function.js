@@ -7,20 +7,20 @@ function loadTodos() {
 }
 
 // funtion to add todo to local storage
-function addTodoToLocalStoreage(todoText) {
+function addTodoToLocalStoreage(todo) {
     const todos = loadTodos();
-    todos.todoList.push(todoText);
+    todos.todoList.push(todo);
     localStorage.setItem("todos", JSON.stringify(todos))
 }
 
 // Function to append todoslist to html
-function appendTodoInHtml(todoText) {
+function appendTodoInHtml(todo) {
     const todoList = document.getElementById("todoList");
     const todoIteam = document.createElement("li");
 
     const textDiv = document.createElement("div");
 
-    textDiv.textContent = todoText;
+    textDiv.textContent = todo.text;
     todoIteam.classList.add('todoItem')
 
     /****** Createing filter buttons  ******/
@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (todoText === '') {
             alert("Please write something for Todo")
         } else {
-            addTodoToLocalStoreage(todoText)
-            appendTodoInHtml(todoText);
+            addTodoToLocalStoreage({ text: todoText, isCompleted: false })
+            appendTodoInHtml({ text: todoText, isCompleted: false });
             todoInput.value = ' '; // seting the input value as empty after adding todo
         }
     });
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // newTodoIteam.textContent = todo
         // todoList.appendChild(newTodoIteam)
 
-        appendTodoInHtml(todo)
+        appendTodoInHtml(todo);
     });
 
 })
