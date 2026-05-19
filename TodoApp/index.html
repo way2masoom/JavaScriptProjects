@@ -8,8 +8,10 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-- Main container of the todo app -->
         <div class="container">
             <h1>Todo Apps</h1>
+            <!-- Input field to write todo -->
             <input type="text" id="todoInput"
                 placeholder="Write your next todo here...">
             <button id="addTodo">Add Todo</button>
@@ -17,11 +19,12 @@
             <!-- Filter buttons  -->
             <div class="fileterbtn">
                 <button class="filterBtn" data-filter="all">All</button>
-                <button class="filterBtn" data-filter="completed">Completed</button>
+                <button class="filterBtn"
+                    data-filter="completed">Completed</button>
                 <button class="filterBtn" data-filter="pending">Pending</button>
             </div>
 
-            <!-- TodoList -->
+            <!-- Todo items will be added here dynamically -->
             <ul id="todoList">
 
             </ul>
