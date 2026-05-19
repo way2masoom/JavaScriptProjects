@@ -16,10 +16,29 @@ function addTodoToLocalStoreage(todoText) {
 // Function to append todoslist to html
 function appendTodoInHtml(todoText) {
     const todoList = document.getElementById("todoList");
-    const todo = document.createElement("li");
-    todo.textContent = todoText;
+    const todoIteam = document.createElement("li");
 
-    todoList.appendChild(todo)
+    todoIteam.textContent = todoText;
+    todoIteam.classList.add('todoItem')
+
+    // Createing filter buttons 
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.classList.add("editBtn")
+
+    const deletBtn = document.createElement("button");
+    deletBtn.textContent = "Delete";
+    deletBtn.classList.add("deletBtn")
+
+    const completedBtn = document.createElement("button");
+    completedBtn.textContent = "Completed";
+    completedBtn.classList.add("completedBtn")
+
+    todoIteam.appendChild(editBtn)
+    todoIteam.appendChild(deletBtn)
+    todoIteam.appendChild(completedBtn)
+
+    todoList.appendChild(todoIteam)
 
 }
 
@@ -40,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             addTodoToLocalStoreage(todoText)
             appendTodoInHtml(todoText);
-            todoInput.value = ' '
+            todoInput.value = ' '; // seting the input value as empty after adding todo
         }
     });
 

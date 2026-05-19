@@ -8,6 +8,8 @@
     --body-Background: #f4f4f9;
     --btn-Primary: #5cabff;
     --border-Color: #ddd;
+    --btn-secondary: #efc727;
+    --btn-active: #4a90e2;
 }
 
 body {
@@ -60,4 +62,29 @@ li:last-child {
 
 li:hover {
     background-color: aliceblue;
+}
+
+/* Filter Buttons  */
+.filterBtn {
+    padding: 5px 6px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--btn-secondary);
+    transition: background-color 0.3s;
+}
+
+.filterBtn:hover {
+    background-color: var(--btn-active);
+    color: var(--border-Color);
+}
+
+.todoItem {
+    letter-spacing: 1px;
+}
+
+.fileterbtn .filterBtn {
+    padding: 15px;
 }
