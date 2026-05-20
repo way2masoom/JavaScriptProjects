@@ -50,9 +50,28 @@ A simple and interactive background color switcher built using JavaScript DOM ma
 
 ---
 
-## 🧪 Upcoming Projects
+### ✅ 4. Todo App
 
-* ✅ Todo List App
+A modern and responsive Todo App built using JavaScript to manage daily tasks efficiently.
+
+#### 🚀 Features
+
+* Add todos easily
+* Add tasks by pressing **Enter**
+* Edit existing todos
+* Delete tasks instantly
+* Mark todos as completed
+* Filter by Completed / Pending / All
+* LocalStorage support
+* Responsive modern UI
+* Smooth animations and hover effects
+
+👉 [View Code](./TodoApp)  
+👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/TodoApp/index.html)
+
+---
+
+## 🧪 Upcoming Projects
 * 🌦️ Weather App (API based)
 * 📝 Notes App (LocalStorage)
 * 🧠 Quiz App
