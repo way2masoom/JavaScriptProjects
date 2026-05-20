@@ -66,8 +66,7 @@ A modern and responsive Todo App built using JavaScript to manage daily tasks ef
 * Responsive modern UI
 * Smooth animations and hover effects
 
-👉 [View Code](./TodoApp)  
-👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/TodoApp/index.html)
+👉 [View Code](./TodoApp)  👉 [Live Demo](https://htmlpreview.github.io/?https://github.com/way2masoom/JavaScriptProjects/blob/main/TodoApp/index.html)
 
 ---
 
