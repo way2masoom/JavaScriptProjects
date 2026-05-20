@@ -107,7 +107,7 @@ function appendTodoInHtml(todo) {
     deletBtn.classList.add("deleteBtn")
 
     const completedBtn = document.createElement("button");
-    completedBtn.textContent = (todo.isCompleted) ? "Reste" : "Completed";
+    completedBtn.textContent = (todo.isCompleted) ? "Reset" : "Completed";
     completedBtn.classList.add("completeBtn")
 
     completedBtn.addEventListener("click", toggleBtns)
