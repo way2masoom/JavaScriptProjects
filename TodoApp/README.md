@@ -16,7 +16,7 @@ A simple and interactive Todo App built using JavaScript to manage daily tasks e
 
 ## 📸 Screenshot
 
-![Todo App UI](./images/TodoApp.png)
+![Todo App UI](./TodoApp.png)
 
 ---
 
