@@ -13,7 +13,7 @@ function loadTodos() {
 // =========================================
 function addTodoToLocalStoreage(todo) {
     const todos = loadTodos();
-    todos.todoList.push(todo);
+    todos.todoList.push({ ...todo, id: todo.length });
     localStorage.setItem("todos", JSON.stringify(todos))
 }
 
@@ -66,6 +66,8 @@ function appendTodoInHtml(todo) {
     const todoList = document.getElementById("todoList");
     const todoItem = document.createElement("li");
 
+    todoItem.setAttribute("data-id", todo.id); // every todoIteam has sperate id  
+
     const textDiv = document.createElement("div");
 
     textDiv.textContent = todo.text;
@@ -112,6 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const sumbitButton = document.getElementById("addTodo");
 
+    let todos = loadTodos();
+
     const todoList = document.getElementById("todoList");
 
     // on the click of filter buttons
@@ -133,8 +137,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (todoText === '') {
             alert("Please write something for Todo")
         } else {
-            addTodoToLocalStoreage({ id: Date.now(), text: todoText, isCompleted: false })
-            appendTodoInHtml({ id: Date.now(), text: todoText, isCompleted: false });
+            todos = loadTodos(); // reloading each times 
+            const id = todos.todoList.length
+
+            addTodoToLocalStoreage({ text: todoText, isCompleted: false, id })
+            appendTodoInHtml({ text: todoText, isCompleted: false, id });
             todoInput.value = ''; // seting the input value as empty after adding todo
         }
     });
@@ -153,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================
     // Load all saved todos on page refresh
     // =====================================
-    const todos = loadTodos();
 
     todos.todoList.forEach(todo => {
         appendTodoInHtml(todo);
