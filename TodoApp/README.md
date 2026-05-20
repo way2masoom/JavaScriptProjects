@@ -1,22 +1,46 @@
-#todo App# ✅ Todo App
+# ✅ Todo App
 
-A simple and interactive Todo App built using JavaScript to manage daily tasks efficiently.
+A modern and responsive Todo App built using JavaScript to manage daily tasks efficiently and improve productivity.
 
 ---
 
 ## 🚀 Features
 
-* Add new tasks easily
-* Mark tasks as completed
-* Delete tasks instantly
-* Clean and responsive UI
-* Real-time task updates
+* ➕ Add new tasks easily
+* ⌨️ Add todos instantly by pressing the **Enter** key
+* ✏️ Edit existing tasks anytime
+* 🗑️ Delete tasks instantly
+* ✅ Mark tasks as completed
+* 🔄 Reset completed tasks back to pending
+* 📂 Filter todos by:
+  * All
+  * Completed
+  * Pending
+* 💾 Stores todos using **LocalStorage**
+* 📱 Fully responsive modern UI
+* ⚡ Real-time dynamic task updates
+* 🎨 Smooth animations and hover effects
 
 ---
 
 ## 📸 Screenshot
 
-![Todo App UI](./TodoApp.png)
+```md
+![Todo App UI](./images/TodoApp.png)
+```
+
+Completed Preview
+
+```md
+![Todo App UI](./images/completed.png)
+```
+
+
+Pending Preview
+
+```md
+![Todo App UI](./images/pending.png)
+```
 
 ---
 
@@ -32,8 +56,8 @@ A simple and interactive Todo App built using JavaScript to manage daily tasks e
 TodoApp/
 │── index.html
 │── style.css
-│── script.js
-│── images/
+│── function.js
+│── TodoApp.png
 ```
 
 ---
@@ -42,19 +66,32 @@ TodoApp/
 
 * DOM Manipulation
 * Event Handling in JavaScript
-* Dynamic UI Updates
+* Dynamic UI Rendering
 * Working with Arrays & Objects
-* Responsive Design Basics
+* LocalStorage Integration
+* CRUD Operations
+* Responsive Web Design
+* JavaScript Functions & Events
+* Mobile Responsive UI Design
 
 ---
 
 ## ⚙️ How to Run
 
 1. Clone the repository
-2. Open `index.html` in your browser
+
+```bash
+git clone https://github.com/way2masoom/JavaScriptProjects.git
+```
+
+2. Open the `TodoApp` folder
+
+3. Run `index.html` in your browser
 
 ---
 
 ## 🙌 Author
 
-MD Masoom Alam
+### MD Masoom Alam
+
+🔗 GitHub: https://github.com/way2masoom
