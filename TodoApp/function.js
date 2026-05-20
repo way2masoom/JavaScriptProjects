@@ -8,13 +8,28 @@ function loadTodos() {
     return todos;
 }
 
+
 // =========================================
+// function to Refresh todos
+// =========================================
+function refreshTodos(todos) {
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+// ========================================= 
 // Save new todo into localStorage
 // =========================================
+
 function addTodoToLocalStoreage(todo) {
+
+    // Load existing todos
     const todos = loadTodos();
-    todos.todoList.push({ ...todo, id: todo.length });
-    localStorage.setItem("todos", JSON.stringify(todos))
+
+    // Add new todo
+    todos.todoList.push(todo);
+
+    // Save updated todos
+    localStorage.setItem("todos", JSON.stringify(todos));
 }
 
 // =========================================
@@ -70,6 +85,10 @@ function appendTodoInHtml(todo) {
 
     const textDiv = document.createElement("div");
 
+    if (todo.isCompleted) {
+        textDiv.classList.add("completed")
+    }
+
     textDiv.textContent = todo.text;
     todoItem.classList.add('todoItem')
 
@@ -88,8 +107,10 @@ function appendTodoInHtml(todo) {
     deletBtn.classList.add("deleteBtn")
 
     const completedBtn = document.createElement("button");
-    completedBtn.textContent = "Completed";
+    completedBtn.textContent = (todo.isCompleted) ? "Reste" : "Completed";
     completedBtn.classList.add("completeBtn")
+
+    completedBtn.addEventListener("click", toggleBtns)
 
     wrapper.appendChild(editBtn)
     wrapper.appendChild(deletBtn)
@@ -102,6 +123,35 @@ function appendTodoInHtml(todo) {
     // Finally add todo item into HTML list
     todoList.appendChild(todoItem)
 
+}
+
+// =========================================
+// toggleBtns buttons working
+function toggleBtns(event) {
+    console.log("toggling");
+
+    const todoIteam = event.target.parentElement.parentElement; // wer get todoIteam
+    const todoId = todoIteam.getAttribute("data-id");
+    const todos = loadTodos();
+
+    // logic 
+    todos.todoList.forEach(todo => {
+
+        // compare current todo id
+        if (todo.id == Number(todoId)) {
+
+            // toggle completed state
+            todo.isCompleted = !todo.isCompleted;
+        }
+    });
+
+    refreshTodos(todos); // fucntion call 
+
+    const todoList = document.getElementById("todoList");
+    todoList.innerHTML = '';
+    todos.todoList.forEach(todo => {
+        appendTodoInHtml(todo);
+    });
 }
 
 // =========================================
@@ -118,13 +168,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const todoList = document.getElementById("todoList");
 
+
     // on the click of filter buttons
     const filterBtns = document.getElementsByClassName("filterBtn");
-    console.log(filterBtns);
 
-    // =====================================
-    // Add click event on filter buttons
-    // =====================================
     for (const btn of filterBtns) {
         btn.addEventListener("click", executedFilterAction)
     }
