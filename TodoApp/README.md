@@ -27,18 +27,16 @@ A modern and responsive Todo App built using JavaScript to manage daily tasks ef
 
 ![Todo App UI](./images/TodoApp.png)
 
-Completed Preview
-
-```md
-![Todo App UI](./images/completed.png)
-```
+Completed Todo
 
 
-Pending Preview
+![Completed Todo](./images/completed.png)
 
-```md
-![Todo App UI](./images/pending.png)
-```
+Pending Todo
+
+
+![Pending Todo](./images/pending.png)
+
 
 ---
 
