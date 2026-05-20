@@ -25,9 +25,7 @@ A modern and responsive Todo App built using JavaScript to manage daily tasks ef
 
 ## 📸 Screenshot
 
-```md
 ![Todo App UI](./images/TodoApp.png)
-```
 
 Completed Preview
 
