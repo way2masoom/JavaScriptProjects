@@ -32,6 +32,75 @@ function addTodoToLocalStoreage(todo) {
     localStorage.setItem("todos", JSON.stringify(todos));
 }
 
+function resetHtmlTodos(todos) {
+
+    // Get todo list container
+    const todoList = document.getElementById("todoList");
+
+    // Clear old todos
+    todoList.innerHTML = '';
+
+    // Add todos again
+    todos.todoList.forEach(todo => {
+        appendTodoInHtml(todo);
+    });
+}
+
+// function to delete todos 
+function deleteTodo(event) {
+    const todoIteam = event.target.parentElement.parentElement;
+
+    const todoId = Number(todoIteam.getAttribute("data-id"));
+
+    const todos = loadTodos();
+
+    // Remove selected todo
+    todos.todoList = todos.todoList.filter(todo => {
+        return todo.id !== todoId;
+    });
+
+    // Save updated todos
+    refreshTodos(todos);
+
+    // Refresh UI
+    resetHtmlTodos(todos);
+}
+
+
+// function to edit todos
+function editTodo(event) {
+
+    const todoIteam = event.target.parentElement.parentElement;
+
+    const todoId = Number(todoIteam.getAttribute("data-id"));
+
+    const todos = loadTodos();
+
+    const selectedTodo = todos.todoList.find(todo => {
+        return todo.id === todoId;
+    });
+
+    const updatedText = prompt("Edit your todo:", selectedTodo.text);
+
+    if (updatedText === null) {
+        return;
+    }
+
+    const trimmedText = updatedText.trim();
+
+    if (trimmedText === '') {
+        alert("Todo cannot be empty");
+        return;
+    }
+
+    selectedTodo.text = trimmedText;
+
+    refreshTodos(todos);
+
+    resetHtmlTodos(todos);
+}
+
+
 // =========================================
 // Handle filter button actions
 // =========================================
@@ -101,10 +170,12 @@ function appendTodoInHtml(todo) {
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
     editBtn.classList.add("editBtn")
+    editBtn.addEventListener("click", editTodo);
 
     const deletBtn = document.createElement("button");
     deletBtn.textContent = "Delete";
     deletBtn.classList.add("deleteBtn")
+    deletBtn.addEventListener("click", deleteTodo);
 
     const completedBtn = document.createElement("button");
     completedBtn.textContent = (todo.isCompleted) ? "Reset" : "Completed";
@@ -192,6 +263,18 @@ document.addEventListener("DOMContentLoaded", () => {
             todoInput.value = ''; // seting the input value as empty after adding todo
         }
     });
+
+    // event to add todo by hitting enter btn
+    todoInput.addEventListener("keypress", (event) => {
+
+        // Check if Enter key is pressed
+        if (event.key === "Enter") {
+
+            // Trigger Add Todo button click
+            sumbitButton.click();
+        }
+    });
+
 
     // =====================================
     // Trim extra spaces while typing
